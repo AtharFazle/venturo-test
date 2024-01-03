@@ -33,6 +33,7 @@ import {
 import { useCartStore } from "@/store/CartStore";
 import { toast } from "react-toastify";
 import { toast as ToastSonner } from "sonner";
+import { Separator } from "@/components/ui/separator";
 
 type Props = {
   vouchers: VouchersApiResponse;
@@ -362,7 +363,8 @@ const Sidebar = (props: Props) => {
                     <p>Rp.{data?.nominal_diskon}</p>
                   </div>
                 ) : null}
-                <div className=" font-medium flex justify-between text-sm">
+                <Separator className="my-4"/>
+                <div className=" font-medium flex justify-between text-lg text-primary">
                   <p>Total Harga</p>
                   <p>Rp.{totalHarga}</p>
                 </div>
